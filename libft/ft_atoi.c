@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alejandroramirez <alejandroramirez@stud    +#+  +:+       +#+        */
+/*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/26 18:04:09 by alramire          #+#    #+#             */
-/*   Updated: 2024/09/08 15:37:19 by alejandrora      ###   ########.fr       */
+/*   Updated: 2024/09/13 10:15:49 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/minitalk.h"
+#include "../include/minitalk.h"
 
 int	ft_isspace(int c)
 {

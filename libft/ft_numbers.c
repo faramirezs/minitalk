@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_numbers.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alejandroramirez <alejandroramirez@stud    +#+  +:+       +#+        */
+/*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:21:07 by alramire          #+#    #+#             */
-/*   Updated: 2024/09/08 13:40:02 by alejandrora      ###   ########.fr       */
+/*   Updated: 2024/09/13 10:16:13 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/minitalk.h"
+#include "../include/minitalk.h"
 
 int	ft_unsigned_int(unsigned int n)
 {
@@ -47,38 +47,11 @@ int	ft_putnbr(int n)
 	return (len);
 }
 
-int	ft_hexa_helper(unsigned long n, char format)
-{
-	char	*hex;
-	int		len;
-
-	len = 0;
-	if (format == 'x')
-		hex = "0123456789abcdef";
-	else
-		hex = "0123456789ABCDEF";
-	if (n > 0)
-	{
-		ft_hexa_helper(n / 16, format);
-		len += ft_putchar(hex[n % 16]);
-	}
-	return (len);
-}
-
-int	ft_hexa(unsigned long n, char format)
-{
-	if (n == 0)
-		return (ft_putchar('0'));
-	else
-		return (ft_hexa_helper(n, format));
-}
-
 int	ft_pointer_helper(unsigned long n)
 {
-	char	*hex;
-	int		len;
+	const char	*hex = "0123456789abcdef";
+	int			len;
 
-	hex = "0123456789abcdef";
 	len = 0;
 	if (n > 0)
 	{
@@ -90,7 +63,7 @@ int	ft_pointer_helper(unsigned long n)
 
 int	ft_pointer(unsigned long n)
 {
-	if(!n)
-		return(ft_putstr("(nil)"));
+	if (!n)
+		return (ft_putstr("(nil)"));
 	return (ft_putstr("0x") + ft_pointer_helper(n));
 }

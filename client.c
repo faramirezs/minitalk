@@ -1,29 +1,44 @@
-# include "include/minitalk.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   client.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/13 09:17:32 by alramire          #+#    #+#             */
+/*   Updated: 2024/09/13 09:44:17 by alramire         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void send_char_as_bits(pid_t server_pid, char c)
+#include "include/minitalk.h"
+
+void	send_char_as_bits(pid_t server_pid, char c)
 {
-	int i = 7;
+	int	i;
+	int	bit;
 
-	while (i >= 0) {
-		int bit = (c >> i) & 1;
-
+	i = 7;
+	while (i >= 0)
+	{
+		bit = (c >> i) & 1;
 		if (bit == 1)
 		{
 			kill(server_pid, SIGUSR1);
-		} else if (bit == 0)
+		}
+		else if (bit == 0)
 		{
 			kill(server_pid, SIGUSR2);
 		}
-		usleep(1000);
+		usleep(2000);
 		i--;
 	}
 }
 
-int main(int ac, char ** av) {
-
-	pid_t server_pid;
-	int i;
-	char c;
+int	main(int ac, char **av)
+{
+	pid_t	server_pid;
+	int		i;
+	char	c;
 
 	i = 0;
 	if (ac != 3)
@@ -32,12 +47,12 @@ int main(int ac, char ** av) {
 		return (-1);
 	}
 	server_pid = (pid_t)ft_atoi(av[1]);
-	while(av[2][i])
+	while (av[2][i])
 	{
 		c = av[2][i];
 		send_char_as_bits(server_pid, c);
 		i++;
 	}
 	send_char_as_bits(server_pid, av[2][i]);
-    return 0;
+	return (0);
 }

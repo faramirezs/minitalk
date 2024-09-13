@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alejandroramirez <alejandroramirez@stud    +#+  +:+       +#+        */
+/*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/08 13:20:30 by alejandrora       #+#    #+#             */
-/*   Updated: 2024/09/08 15:57:22 by alejandrora      ###   ########.fr       */
+/*   Updated: 2024/09/13 10:33:28 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef MINITALK_H
 # define MINITALK_H
@@ -20,12 +19,12 @@
 # include <stdlib.h>
 # include <stdio.h>
 # include <signal.h>
+# include <sys/types.h>
 
-/* Prototypes */
 int		ft_unsigned_int(unsigned int n);
 int		ft_putnbr(int n);
-int		ft_hexa_helper(unsigned long n, char format);
-int		ft_hexa(unsigned long n, char format);
+int		ft_hexa_helper(unsigned int n, char format);
+int		ft_hexa(unsigned int n, char format);
 int		ft_pointer_helper(unsigned long n);
 int		ft_pointer(unsigned long n);
 size_t	ft_strlen(char const *s);

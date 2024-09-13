@@ -1,8 +1,8 @@
 NAME_SERVER	= server
 NAME_CLIENT = client
 
-SRCS_SERVER	= ./libft/ft_printf.c ./libft/ft_numbers.c ./libft/ft_words.c ./libft/ft_atoi.c server.c
-SRCS_CLIENT	= ./libft/ft_printf.c ./libft/ft_numbers.c ./libft/ft_words.c ./libft/ft_atoi.c client.c
+SRCS_SERVER	= ./libft/ft_printf.c ./libft/ft_numbers.c ./libft/ft_words.c ./libft/ft_atoi.c ./libft/ft_hexa.c server.c
+SRCS_CLIENT	= ./libft/ft_printf.c ./libft/ft_numbers.c ./libft/ft_words.c ./libft/ft_atoi.c ./libft/ft_hexa.c client.c
 
 HEADERS	= ./include/minitalk.h
 

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_words.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alejandroramirez <alejandroramirez@stud    +#+  +:+       +#+        */
+/*   By: alramire <alramire@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:23:05 by alramire          #+#    #+#             */
-/*   Updated: 2024/09/08 13:40:11 by alejandrora      ###   ########.fr       */
+/*   Updated: 2024/09/13 10:16:39 by alramire         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "../include/minitalk.h"
+#include "../include/minitalk.h"
 
 size_t	ft_strlen(char const *s)
 {
